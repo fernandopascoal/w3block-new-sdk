@@ -1,18 +1,24 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",       
-    "module": "ESNext",               
-    "jsx": "react-jsx",           
-    "outDir": "./dist",               
-    "target": "ESNext",               
-    "declaration": true,              
-    "declarationMap": true,            // Gere os mapas de declaração
-    "strict": true,                    // Habilite a verificação estrita de tipo
-    "esModuleInterop": true,           // Para compatibilidade com módulos CommonJS e ES
-    "skipLibCheck": true,              // Pula a verificação de tipos das bibliotecas
-    "sourceMap": true,                 // Gere arquivos de mapa de origem
-    "resolveJsonModule": true          // Suporte para importação de arquivos JSON
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "types": ["vite/client"],
+    "jsx": "react-jsx"
   },
-  "include": ["src/**/*"],             // Inclua todos os arquivos da pasta src
-  "exclude": ["node_modules", "dist"]  // Exclua node_modules e dist
+  "include": ["src/**/*.tsx", "src/**/*.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

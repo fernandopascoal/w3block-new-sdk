@@ -1,0 +1,8 @@
+{
+    "extends": "@microsoft/api-extractor/extends/standard",
+    "mainEntryPointFilePath": "./dist/w3block-new-sdk.d.ts",
+    "dtsRollup": {
+      "enabled": true,
+      "untrimmedFilePath": "./dist/w3block-new-sdk-untrimmed.d.ts"
+    }
+  }
