@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "*": ["node_modules/*"],
-      "@components/*": ["src/components/*"],
-      "@hooks/*": ["src/hooks/*"]
-    },
-    "moduleResolution": "Node", 
-    "jsx": "react-jsx", 
-    "outDir": "./dist", 
-    "target": "ESNext", 
-    "module": "ESNext" 
+    "moduleResolution": "node",       
+    "module": "ESNext",               
+    "jsx": "react-jsx",           
+    "outDir": "./dist",               
+    "target": "ESNext",               
+    "declaration": true,              
+    "declarationMap": true,            // Gere os mapas de declaração
+    "strict": true,                    // Habilite a verificação estrita de tipo
+    "esModuleInterop": true,           // Para compatibilidade com módulos CommonJS e ES
+    "skipLibCheck": true,              // Pula a verificação de tipos das bibliotecas
+    "sourceMap": true,                 // Gere arquivos de mapa de origem
+    "resolveJsonModule": true          // Suporte para importação de arquivos JSON
   },
-  "include": ["src/**/*"], 
-  "exclude": ["node_modules"] 
+  "include": ["src/**/*"],             // Inclua todos os arquivos da pasta src
+  "exclude": ["node_modules", "dist"]  // Exclua node_modules e dist
 }
