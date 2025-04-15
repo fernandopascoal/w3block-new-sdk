@@ -1,28 +1,25 @@
 {
   "name": "w3block-new-sdk",
-  "version": "1.0.2",
-  "type": "module",
+  "version": "1.0.3",
   "license": "Apache-2.0",
-  "main": "dist/w3block-sdk.cjs.js",
-  "files": [
-    "dist"
-  ],
-  "types": "./dist/w3block-ui-sdk.d.ts",
-  "module": "./dist/w3block-ui-sdk.js",
+  "type": "module",
+  "files": ["dist"],
+  "types": "./dist/index.d.ts",
+  "module": "./dist/w3block-new-sdk.es.js",
   "exports": {
     ".": {
-      "import": "./dist/w3block-ui-sdk.js",
-      "require": "./dist/w3block-ui-sdk.umd.cjs"
+      "import": "./dist/w3block-new-sdk.es.js",
+      "require": "./dist/w3block-new-sdk.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "build": "yarn clean && vite build",
     "lint": "eslint . --ext .ts,.tsx",
     "preview": "vite preview",
     "clean": "rimraf dist",
-    "dev:watch": "tsc && vite build --watch"
+    "dev:watch": "vite build --watch"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.3",
