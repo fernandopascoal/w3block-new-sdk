@@ -5,6 +5,11 @@ export interface MyButtonProps {
   className?: string;
 }
 
-export const MyButton: React.FC<MyButtonProps> = ({ label, className }) => {
-  return <button className={className}>{label}</button>;
+export const MyButton = ({ label, className }: MyButtonProps) => {
+  console.log(label, "buildou");
+  return (
+    <div>
+      <button className={className}>teste build</button>
+    </div>
+  );
 };
